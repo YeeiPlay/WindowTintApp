@@ -68,7 +68,12 @@ form {
   border-radius: 10px;
 }
 
-.mb-0, h5, .showName {
+#notValid {
+  font-size: x-small;
+  color: rgb(211, 3, 3);
+}
+
+.mb-0, h5, .showName, .feedInput, ul {
   color: rgb(81, 81, 81);
 }
 
@@ -81,6 +86,10 @@ form {
 
 #shows-list {
   color: rgb(58, 58, 58);
+}
+#showTitle {
+  color: rgb(39, 39, 39);
+  font-size: larger;
 }
 
 @media (max-width: 700px) {

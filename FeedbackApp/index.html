@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Tv show Practice</title>
+    <title>Marvel Comics FeedBack</title>
   </head>
   <body>
     <div class="modal modal-tour position-static d-block bg-secondary py-5" tabindex="-1" role="dialog" id="modalTour">
@@ -20,21 +20,35 @@
             <div class="modal-body p-5">
               <h3 class="fw-bold mb-5 p-1 pb-5">Marvel Comics<br> 
                 <small>User Feedback</small> </h3>
+                 <!-- User Feedback Form start-->
               <div class="wrapper">
                 <form id="form-count">
                   <label for="showCount"> 
                     <h6 class="mb-0">How Many Movies would you like to provide FeedBack to?</h6> 
-                    <br><h5>YOUR NUMBER</h5>
+                    <br>
+                    <h5>YOUR NUMBER</h5>
+                    <!-- error message to user loaded via js -->
+                    <h6 id="notValid"></h6>
+                    <!-- ----------------------------------- -->
                   </label>
-                  <input type="number" name="showCount" id="showCount" value="" />
+                  <input type="number" name="showCount" id="showCount" value=""/>
                   <button type="submit" class="btn btn-lg btn-primary mt-5 w-50"> <span id="btnSubmit">Continue</span></button>
                   <!-- <button type="submit">GO!</button> -->
                 </form>
                 <form id="form-show" class="hideMe">
-                  <label class="showName" for="showName">Enter Show Name</label>
-                  <input type="text" name="showName" id="showName" />
+                  <label class="showName" for="showName">Enter Movie Name</label>
+                  <input type="text" name="showName" id="showName"/>
                   <button type="submit" class="btn btn-lg btn-success mt-5 w-50"> <span id="btnSubmit">NEXT</span></button>
                 </form>
+                
+                <form id="userFeedback" class="hideMe">
+                  <label class="feedInput" for="feedInput">Enter Feedback For: <span id="showTitle"> 
+                    <br><ol id="shows-list"></ol></span></label>
+                  <input type="text" name="feedInput" id="feedInput"/>
+                  <button type="submit" class="btn btn-lg btn-success mt-5 w-50"> <span id="btnFeedSubmit">Continue</span></button>
+                </form>
+                <!-- User Feedback Form end-->
+
                 <ul class="my-1 list-unstyled">
                     <li class="d-flex">
                       <svg class="bi text-primary flex-shrink-0" width="48" height="48"><use xlink:href="#film"></use></svg>
@@ -45,7 +59,8 @@
                     </li>
                   </ul>
                 <div>
-                  <ol id="shows-list"></ol>
+                  <ul id="paragrFeed"></ul>
+                </div>
                 </div>
               </div>
             </div>
