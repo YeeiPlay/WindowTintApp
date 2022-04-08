@@ -1,0 +1,101 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.modal-body {
+  background-image: url(/assets/img/captain.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 800px;
+  width: 500px;
+}
+
+.modal {
+  background-image: url(/assets/img/marvel.jpg);
+  background-repeat: repeat;
+  background-size: contain;
+}
+
+.wrapper {
+  height: auto;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgba(240, 240, 240, 0.94);
+  color: rgb(207, 207, 207);
+  font-size: 18px;
+  padding: 45px;
+  border-radius: 10px;
+}
+
+.hideMe {
+  display: none;
+}
+
+input {
+  padding: 7px;
+  margin: 10px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+form {
+  text-align: center;
+}
+
+.muted {
+  color: rgb(152, 152, 152);
+  font-size: 13px;
+}
+.muted:hover {
+  color: rgb(110, 110, 110);
+  font-size: 15px;
+}
+
+.my-1 {
+  color: rgb(73, 73, 73);
+  
+}
+
+.fw-bold {
+  color: rgb(34, 34, 34);
+  background-color: rgba(0, 0, 0, 0.11);
+  border-radius: 10px;
+}
+
+.mb-0, h5, .showName {
+  color: rgb(81, 81, 81);
+}
+
+#btnSubmit:hover {
+  color: rgb(255, 255, 255);
+  border-radius: 50px;
+  text-align: center;
+  font-size: larger;
+}
+
+#shows-list {
+  color: rgb(58, 58, 58);
+}
+
+@media (max-width: 700px) {
+  .d-flex{
+    font-size: smaller;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .modal-body {
+    background-image: url(/assets/img/captain.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 800px;
+    width: 390px;
+  }
+}
+ 
