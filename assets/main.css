@@ -219,7 +219,7 @@ h2 {
 
 /*////////////////////////////////////////////////////////////////////////////////////// */
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .car img{
     padding-top: 30px;
     max-width: 100%;
@@ -228,12 +228,12 @@ h2 {
 
   .logo img {
     position: relative;
-    top: 30px;
+    top: 120px;
+    right: 281px;
     filter: grayscale(0.6);
     width: 120px;
     height: 60px;
     padding-top: 90px;
-    margin-left: 110px;
     text-align: center;
     font-family:Arial, Helvetica, sans-serif;
   }
@@ -248,9 +248,9 @@ h2 {
     border-radius: 15px;
     width: 290px;
     height: 40px;
-    bottom: 335px;
+    bottom: 400px;
     margin-top: 10px;
-    margin-left: 30px;
+    margin-left: 50px;
     box-shadow: 0px 6px 9px 1px #00000037;
   }
   
@@ -259,7 +259,7 @@ h2 {
     position: absolute;
     top: 70px; 
     right: 80px; 
-    bottom: 730px; 
+    bottom: 795px; 
     left: 150px;
     z-index: -1;
     mix-blend-mode: hue;  
@@ -269,9 +269,9 @@ h2 {
   .carLights::before{
     content: "";
     position: absolute;
-    top: 97px; 
-    right: 25px; 
-    bottom: 723px; 
+    top: 105px; 
+    right: 65px; 
+    bottom: 765px; 
     left: 100px;
     mix-blend-mode: hue;
   }
