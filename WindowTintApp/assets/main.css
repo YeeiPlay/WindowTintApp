@@ -1,0 +1,371 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*, *::after, *::before{
+  box-sizing: inherit;
+  margin: 0; 
+  padding: 0; 
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.car img{
+  padding-top: 190px;
+  max-width: 100%;
+  min-width: 30px;
+}
+
+.logo img {
+  position: relative;
+  width: 120px;
+  height: 60px;
+  bottom: 880px;
+  filter: grayscale(0.6);
+  margin-left: 425px;
+}
+
+h3 {
+  position: absolute;
+  background-color: rgba(19, 19, 28, 0.084);
+  color: rgb(103, 103, 103);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding-top: 15px;
+  border-radius: 15px;
+  width: 690px;
+  height: 40px;
+  bottom: 850px;
+  margin-left: 150px;
+  box-shadow: 0px 6px 9px 1px #00000037;
+}
+
+h2 {
+  color: rgb(103, 103, 103);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.car::after{
+  content: "";
+  position: absolute;
+  top: 290px; 
+  right: 700px; 
+  bottom: 600px; 
+  left: 760px;
+  z-index: -1;
+  mix-blend-mode: hue;  
+}
+
+/* tail lights color change */
+.carLights::before{
+  content: "";
+  position: absolute;
+  top: 360px; 
+  right: 550px; 
+  bottom: 550px; 
+  left: 700px;
+  mix-blend-mode: hue;
+}
+
+.container {
+  padding: 50px;
+ width: 960px;
+ height: 790px;
+ border: 4px;
+ margin-top: 30px;
+ border-color: rgba(63, 63, 63, 0.149);
+ border-style: solid;
+ box-shadow: 5px 10px 8px 10px #888888;
+}
+
+.carNav{
+  position: relative;
+  padding: 10px;
+  padding-top: 40px;
+  text-align: center;
+}
+
+.carNav label{
+  display: inline-block;
+  width: 60px; 
+  height: 60px; 
+  border-radius: 80%;
+  cursor: pointer;
+}
+
+.carNav label + label{
+  margin-left: 40px; 
+}
+
+
+/*////////////////////////////////////////////////////////////////////////////////////// */
+
+/* THIS WILL CHANGE THE WINDOW TINT COLOR*/
+
+.carNav label:nth-of-type(1), 
+#colorOne:checked ~ .car::after{
+  background-color: rgb(0, 0, 0);
+  
+}
+.carNav label:nth-of-type(2), 
+#colorTwo:checked ~ .car::after{
+  background-color: rgba(18, 26, 28, 0.916);
+}
+.carNav label:nth-of-type(3),
+#colorThree:checked ~ .car::after{
+  background-color: rgba(29, 41, 44, 0.823);
+}
+
+.carNav label:nth-of-type(4),
+#colorFour:checked ~ .car::after{
+  background-color: rgba(29, 41, 44, 0.537);
+}
+
+
+#colorOne:checked ~ .carNav > label:nth-of-type(1), 
+#colorTwo:checked ~ .carNav > label:nth-of-type(2),
+#colorThree:checked ~ .carNav > label:nth-of-type(3),
+#colorFour:checked ~ .carNav > label:nth-of-type(4){
+  transform: scale(1.2);
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////// */
+
+#colorOne:checked ~ .carNav > label:nth-of-type(1){
+  background-color: hsl(0, 0%, 0%);
+}
+#colorTwo:checked ~ .carNav > label:nth-of-type(2){
+  background-color: hsla(0, 0%, 8%, 0.862);
+}
+#colorThree:checked ~ .carNav > label:nth-of-type(3){
+  background-color: hsla(0, 0%, 10%, 0.677);
+}
+#colorFour:checked ~ .carNav > label:nth-of-type(4){
+  background-color: hsla(0, 0%, 13%, 0.507);
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////// */
+
+.lightsNav{
+  position: relative;
+  padding: 10px;
+  text-align: center;
+  padding-top: 35px;
+}
+
+.lightsNav label{
+  display: inline-block;
+  width: 60px; 
+  height: 60px; 
+  border-radius: 80%;
+  cursor: pointer;
+}
+
+.lightsNav label + label{
+  margin-left: 40px; 
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* THIS WILL CHANGE THE COLOR OF THE LIGHTS */
+
+.lightsNav label:nth-of-type(1), 
+#light-colorOne:checked ~ .carLights::before{
+  background-color: rgba(0, 0, 0);
+}
+.lightsNav label:nth-of-type(2), 
+#light-colorTwo:checked ~ .carLights::before{
+  background-color: rgba(141, 30, 30, 0.941);
+}
+.lightsNav label:nth-of-type(3),
+#light-colorThree:checked ~ .carLights::before{
+  background-color: rgba(104, 6, 216);
+}
+.lightsNav label:nth-of-type(4),
+#light-colorFour:checked ~ .carLights::before{
+  background-color: rgba(181, 8, 201);
+}
+
+#light-colorOne:checked ~ .lightsNav > label:nth-of-type(1), 
+#light-colorTwo:checked ~ .lightsNav > label:nth-of-type(2),
+#light-colorThree:checked ~ .lightsNav > label:nth-of-type(3),
+#light-colorFour:checked ~ .lightsNav > label:nth-of-type(4){
+  transform: scale(1.2);
+}
+/*////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* --------------icon color changes are made here-------------------- */
+
+#light-colorOne:checked ~ .lightsNav > label:nth-of-type(1){
+  background-color: rgba(0, 0, 0);
+}
+#light-colorTwo:checked ~ .lightsNav> label:nth-of-type(2){
+  background-color: rgba(177, 38, 38, 0.941);
+}
+#light-colorThree:checked ~ .lightsNav > label:nth-of-type(3){
+  background-color: rgba(104, 6, 216);
+}
+#light-colorFour:checked ~ .lightsNav > label:nth-of-type(4){
+  background-color: rgba(181, 8, 201);
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////// */
+
+@media (max-width: 700px) {
+  .car img{
+    padding-top: 30px;
+    max-width: 100%;
+    min-width: 50px;
+  }
+
+  .logo img {
+    position: relative;
+    top: 30px;
+    filter: grayscale(0.6);
+    width: 120px;
+    height: 60px;
+    padding-top: 90px;
+    margin-left: 110px;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+
+  h3 {
+    position: absolute;
+    background-color: rgba(19, 19, 28, 0.084);
+    color: rgb(103, 103, 103);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-top: 15px;
+    border-radius: 15px;
+    width: 290px;
+    height: 40px;
+    bottom: 335px;
+    margin-top: 10px;
+    margin-left: 30px;
+    box-shadow: 0px 6px 9px 1px #00000037;
+  }
+  
+  .car::after{
+    content: "";
+    position: absolute;
+    top: 70px; 
+    right: 80px; 
+    bottom: 730px; 
+    left: 150px;
+    z-index: -1;
+    mix-blend-mode: hue;  
+  }
+  
+  /* tail lights color change */
+  .carLights::before{
+    content: "";
+    position: absolute;
+    top: 97px; 
+    right: 25px; 
+    bottom: 723px; 
+    left: 100px;
+    mix-blend-mode: hue;
+  }
+  
+  .container {
+   padding: 5px;
+   width: 390px;
+   height: 574px;
+   margin: 30px 14px 0px 14px;
+   box-shadow: 5px 10px 8px 10px #888888;
+  }
+  
+  .carNav{
+    position: relative;
+    padding: 2px;
+    padding-top: 20px;
+    text-align: center;
+  }
+  
+  .carNav label{
+    display: inline-block;
+    width: 35px; 
+    height: 35px; 
+    border-radius: 80%;
+    cursor: pointer;
+  }
+  
+  .carNav label + label{
+    margin-left: 30px; 
+  }
+  
+  
+  .carNav label:nth-of-type(1), 
+  #colorOne:checked ~ .car::after{
+    background-color: rgb(0, 0, 0);
+    
+  }
+  .carNav label:nth-of-type(2), 
+  #colorTwo:checked ~ .car::after{
+    background-color: rgba(18, 26, 28, 0.916);
+  }
+  .carNav label:nth-of-type(3),
+  #colorThree:checked ~ .car::after{
+    background-color: rgba(29, 41, 44, 0.823);
+  }
+  
+  .carNav label:nth-of-type(4),
+  #colorFour:checked ~ .car::after{
+    background-color: rgba(29, 41, 44, 0.537);
+  }
+  
+  
+  #colorOne:checked ~ .carNav > label:nth-of-type(1), 
+  #colorTwo:checked ~ .carNav > label:nth-of-type(2),
+  #colorThree:checked ~ .carNav > label:nth-of-type(3),
+  #colorFour:checked ~ .carNav > label:nth-of-type(4){
+    transform: scale(1.2);
+  }
+
+  
+  #colorOne:checked ~ .carNav > label:nth-of-type(1){
+    background-color: hsl(0, 0%, 0%);
+  }
+  #colorTwo:checked ~ .carNav > label:nth-of-type(2){
+    background-color: hsla(0, 0%, 8%, 0.862);
+  }
+  #colorThree:checked ~ .carNav > label:nth-of-type(3){
+    background-color: hsla(0, 0%, 10%, 0.677);
+  }
+  #colorFour:checked ~ .carNav > label:nth-of-type(4){
+    background-color: hsla(0, 0%, 13%, 0.507);
+  }
+
+  .lightsNav{
+    position: relative;
+    padding: 10px;
+    text-align: center;
+    padding-top: 25px;
+  }
+
+  h2 {
+    font-size: smaller;
+  }
+  
+  .lightsNav label{
+    display: inline-block;
+    width: 35px; 
+    height: 35px; 
+    border-radius: 80%;
+    cursor: pointer;
+  }
+  
+  .lightsNav label + label{
+    margin-left: 30px; 
+  }
+
+}
